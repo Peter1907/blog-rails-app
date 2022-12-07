@@ -81,7 +81,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone git@github.com:Peter1907/blog-rails-app.git
 ```
--
 
 ### Install
 
@@ -91,7 +90,6 @@ Install this project with:
   cd blog-rails-app
   bundle install
 ```
--
 
 ### Usage
 
