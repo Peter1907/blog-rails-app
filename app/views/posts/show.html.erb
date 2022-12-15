@@ -1,1 +1,23 @@
-<h1>Post <%= @id %> for user <%= @user_id %></h1>
+<section class="post-page">
+  <div class="post">
+    <div class="post-header">
+      <h1><%= "Post ##{@post.id} #{@post.author.name}" %></h1>
+      <div class="stats">
+        <span>likes: <%= @post.likes.count %></span>,
+        <span>comments: <%= @post.comments.count %></span>
+      </div>
+    </div>
+    <div class="post-body">
+      <%= @post.text %>
+    </div>
+    <div class="comments-section">
+      <% @post.comments.each do |comment| %>
+        <div class="comment">
+          <span><%= comment.author.name %>: </span>
+          <span><%= comment.text %></span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <a href=<%= user_posts_path(@post.author.id) %>>Back</a>
+</section>
