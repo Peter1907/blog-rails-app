@@ -19,5 +19,7 @@
       <% end %>
     </div>
   </div>
+  <%= render 'likes/like_button' %>
+  <%= render 'comments/comment_form' %>
   <a href=<%= user_posts_path(@post.author.id) %>>Back</a>
 </section>
