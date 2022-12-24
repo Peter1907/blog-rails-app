@@ -1,0 +1,7 @@
+<section class="comment-form">
+  <h3>Leave a comment:</h3>
+  <%= form_with model: @comment, url: user_post_comments_path(@post.author.id, @post.id) do |f| %>
+    <%= f.text_area :text %><br>
+    <%= f.submit "Create Comment"%>
+  <% end %>
+</section>
