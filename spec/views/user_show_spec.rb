@@ -10,7 +10,7 @@ RSpec.describe 'User show view', type: :feature do
     @post4 = Post.create(title: 'post4', text: 'text4', author_id: @user1.id)
     @post5 = Post.create(title: 'post5', text: 'text5', author_id: @user2.id)
   end
-  
+
   it 'shows the profile picture of the user' do
     visit user_path(@user1)
     expect(page).to have_css("img[src='https://images.com/image1.jpg']")
@@ -20,7 +20,7 @@ RSpec.describe 'User show view', type: :feature do
     visit user_path(@user1)
     expect(page).to have_content('user1')
   end
-  
+
   it 'displays the number of posts for the user' do
     visit user_path(@user1)
     expect(page).to have_content('Number of posts: 4')

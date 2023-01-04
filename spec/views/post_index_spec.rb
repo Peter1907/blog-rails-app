@@ -25,7 +25,7 @@ RSpec.describe 'Posts index view', type: :feature do
     visit user_posts_path(@user1)
     expect(page).to have_content('user1')
   end
-  
+
   it 'displays the number of posts for the user' do
     visit user_posts_path(@user1)
     expect(page).to have_content('Number of posts: 4')
