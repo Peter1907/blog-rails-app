@@ -1,7 +1,7 @@
 <section class="users">
   <% @users.each do |user| %>
     <div class="user">
-        <img src=<%= user.photo %> alt="User photo">
+        <img class="user-photo" src=<%= user.photo %> alt="User photo">
         <div class="info">
           <h1>
             <%= link_to user.name, user_path(user.id) %>
