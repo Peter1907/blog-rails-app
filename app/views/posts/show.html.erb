@@ -8,7 +8,8 @@
       </div>
     </div>
     <div class="post-body">
-      <%= @post.text %>
+      <h4><%= @post.title %></h4>
+      <p><%= @post.text %></p>
     </div>
     <div class="comments-section">
       <% @post.comments.each do |comment| %>
