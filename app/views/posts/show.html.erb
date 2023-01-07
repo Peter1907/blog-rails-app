@@ -16,6 +16,9 @@
         <div class="comment">
           <span><%= comment.author.name %>: </span>
           <span><%= comment.text %></span>
+          <%= if can? :destroy, comment %>
+            <%= link_to "Delete", user_post_comment_path(@post.author.id, @post.id, comment.id), method: :delete %>
+          <% end %>
         </div>
       <% end %>
     </div>
