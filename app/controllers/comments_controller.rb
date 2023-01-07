@@ -12,4 +12,12 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    @post = Post.find(@comment.post_id)
+    @post.decrement!(:comments_counter)
+    redirect_to @comment.post
+  end
 end

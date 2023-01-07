@@ -22,4 +22,10 @@ class PostsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to user_posts_path(@post.author)
+  end
 end
